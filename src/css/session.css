@@ -1,37 +1,37 @@
 body {
-	margin: 10px;
-	font-size: 16px;
+  margin: 10px;
+  font-size: 16px;
 }
 
 h1 {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 fieldset fieldset {
-	padding-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 textarea {
-	margin-bottom: 1rem;
-	box-sizing: border-box;
-	overflow-x: hidden;
-	resize: none;
-	width: 60%;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  resize: none;
+  width: 60%;
 }
 
 input[type="number"] {
-	width: 4em;
+  width: 4em;
 }
 
 button {
-	margin-right: 0.5rem;
-	margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .container {
-	margin: 2rem 0.5rem;
+  margin: 2rem 0.5rem;
 }
 
 .warning {
-	color: red;
+  color: red;
 }

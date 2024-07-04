@@ -1,87 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-		<!-- Minimal classless stylesheet -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/yorha.css">
+    <!-- Minimal classless stylesheet -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/yorha.css" />
 
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="css/fontawesome.css">
-		<link rel="stylesheet" href="css/solid.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/solid.css" />
 
-		<!-- Ours -->
-		<link rel="stylesheet" href="css/popup.css">
-	</head>
+    <!-- Ours -->
+    <link rel="stylesheet" href="css/popup.css" />
+  </head>
 
-	<body>
-		<h1>Chartarrr!</h1>
+  <body>
+    <h1>Chartarrr!</h1>
 
-		<div id="start">
-			<div class="container">
-				<label for="duration">Length (minutes):</label>
-				<input type="number" id="duration" min="1" required="" />
-			</div>
-			<button id="button-start">New Session</button>
-		</div>
+    <div id="start">
+      <div class="container">
+        <label for="duration">Length (minutes):</label>
+        <input type="number" id="duration" min="1" required="" />
+      </div>
+      <button id="button-start">New Session</button>
+    </div>
 
-		<div id="active">
-			<div>
-				<div class="container comment-box">
-					<textarea id="comment" rows="3" placeholder="New comment..."></textarea>
-					<button id="button-screenshot" title="Take screenshot of active tab.">
-						<i class="fa-solid fa-camera"></i>
-					</button>
-				</div>
-				<div class="container attachment-box" id="attachment-box" aria-label="Attached image actions">
-					<span id="attachment-preview">
-						<i class="fa-solid fa-paperclip"></i>
-						Image attached.
-					</span>
-					&emsp;&emsp;
-					<span id="attachment-delete">
-						<i class="fa-solid fa-trash"></i>
-						Delete
-					</span>
-				</div>
-				<div class="container" role="group" aria-label="Comment type">
-					<button id="button-note" value="note">
-						<i class="fa-solid fa-comment"></i> Note
-					</button>
-					<button id="button-bug" value="bug">
-						<i class="fa-solid fa-bug"></i> Bug
-					</button>
-					<button id="button-clarification" value="clarification">
-						<i class="fa-solid fa-question"></i> Clarification
-					</button>
-				</div>
-			</div>
-			<hr>
-			<div class="container" role="group" aria-label="Session actions">
-				<button id="button-details">View Details</button>
-				<button id="button-end">End Session</button>
-				<span class="fa-stack" title="Total comment count.">
-					<i class="fa-solid fa-note-sticky fa-stack-2x"></i>
-					<span class="fa-stack-1x" id="comment-count">0</span>
-				</span>
-				<!--
+    <div id="active">
+      <div>
+        <div class="container comment-box">
+          <textarea
+            id="comment"
+            rows="3"
+            placeholder="New comment..."
+          ></textarea>
+          <button id="button-screenshot" title="Take screenshot of active tab.">
+            <i class="fa-solid fa-camera"></i>
+          </button>
+        </div>
+        <div
+          class="container attachment-box"
+          id="attachment-box"
+          aria-label="Attached image actions"
+        >
+          <span id="attachment-preview">
+            <i class="fa-solid fa-paperclip"></i>
+            Image attached.
+          </span>
+          &emsp;&emsp;
+          <span id="attachment-delete">
+            <i class="fa-solid fa-trash"></i>
+            Delete
+          </span>
+        </div>
+        <div class="container" role="group" aria-label="Comment type">
+          <button id="button-note" value="note">
+            <i class="fa-solid fa-comment"></i> Note
+          </button>
+          <button id="button-bug" value="bug">
+            <i class="fa-solid fa-bug"></i> Bug
+          </button>
+          <button id="button-clarification" value="clarification">
+            <i class="fa-solid fa-question"></i> Clarification
+          </button>
+        </div>
+      </div>
+      <hr />
+      <div class="container" role="group" aria-label="Session actions">
+        <button id="button-details">View Details</button>
+        <button id="button-end">End Session</button>
+        <span class="fa-stack" title="Total comment count.">
+          <i class="fa-solid fa-note-sticky fa-stack-2x"></i>
+          <span class="fa-stack-1x" id="comment-count">0</span>
+        </span>
+        <!--
 				<button id="button-settings" aria-label="Settings">
 					<i class="fa-solid fa-gear"></i>
 				</button>
 				-->
-			</div>
-		</div>
+      </div>
+    </div>
 
-		<!-- Fixed elements -->
-		<div class="message" id="message">
-			<span id="message-text">Placeholder text to be replaced by JS.</span>
-		</div>
+    <!-- Fixed elements -->
+    <div class="message" id="message">
+      <span id="message-text">Placeholder text to be replaced by JS.</span>
+    </div>
 
-		<!-- Scripts -->
-		<script src="js/browser-polyfill.js"></script>
-		<script src="js/helpers.js"></script>
-		<script src="js/popup.js"></script>
-	</body>
+    <!-- Scripts -->
+    <script src="js/browser-polyfill.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
 </html>

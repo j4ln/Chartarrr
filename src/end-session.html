@@ -1,90 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-		<!-- Minimal classless stylesheet -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/yorha.css">
+    <!-- Minimal classless stylesheet -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/yorha.css" />
 
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="css/fontawesome.css">
-		<link rel="stylesheet" href="css/solid.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/solid.css" />
 
-		<!-- Ours -->
-		<link rel="stylesheet" href="css/session.css">
-	</head>
+    <!-- Ours -->
+    <link rel="stylesheet" href="css/session.css" />
+  </head>
 
-	<body>
-		<h1>End Session</h1>
+  <body>
+    <h1>End Session</h1>
 
-		<h2>Review Comments</h2>
-		<div class="container" id="comments">
-			<h3>Comment <span id="comment-current">?</span> of <span id="comment-total">?</span></h3>
-			<div class="container" id="comment"></div>
-			<div class="container" role="group" aria-label="Navigate notes">
-				<button id="button-previous">
-					<i class="fa-solid fa-angle-left"></i> Previous Note
-				</button>
-				<button id="button-next">
-					Next Note <i class="fa-solid fa-angle-right"></i>
-				</button>
-			</div>
-		</div>
-		<div class="container" id="no-comments">
-			<p>No comments made.</p>
-		</div>
+    <h2>Review Comments</h2>
+    <div class="container" id="comments">
+      <h3>
+        Comment <span id="comment-current">?</span> of
+        <span id="comment-total">?</span>
+      </h3>
+      <div class="container" id="comment"></div>
+      <div class="container" role="group" aria-label="Navigate notes">
+        <button id="button-previous">
+          <i class="fa-solid fa-angle-left"></i> Previous Note
+        </button>
+        <button id="button-next">
+          Next Note <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="container" id="no-comments">
+      <p>No comments made.</p>
+    </div>
 
-		<h2>Charter Details</h2>
-		<div class="container">
-			<p>
-				<label for="charter">Charter Title:</label>
-				<input type="text" id="charter" placeholder="Explore..." />
-			</p>
-			<p>
-				<label for="environment">Environment:</label><br>
-				<textarea id="environment" rows="3">Web, QA, x.x.x</textarea>
-			</p>
-			<p>
-				<label for="estimated-duration">Estimated Duration (minutes):</label>
-				<input type="number" id="estimated-duration" min="0" />
-			</p>
-			<p>
-				<label for="actual-duration">Actual Duration (minutes):</label>
-				<input type="number" id="actual-duration" min="0" />
-			</p>
-			<p>
-				<label for="start-date">Started:</label>
-				<input type="datetime-local" id="start-date" />
-			</p>
-			<p>
-				<label for="end-date">Ended:</label>
-				<input type="datetime-local" id="end-date" />
-			</p>
-		</div>
-		
-		<h2>Actions</h2>
-		<div class="container">
-			<p>The following actions below can be used to export this session's details, and also for ending the active session.</p>
-			<div class="container" role="group" aria-label="Session actions">
-				<button id="button-export">Export Session</button>
-				<button id="button-preview-md">Preview Markdown</button>
-				<button id="button-preview-json">Preview JSON</button>
-				<button id="button-end">End Session</button>
-				<p class="warning" id="warning-end-session">Please make sure you've exported your session if you wish to keep it's details. Ending the session will reset all details logged, and allow for a new session to be started. Confirm ending the session by clicking the button again.</p>
-				<div id="preview">
-					<pre id="preview-content"></pre>
-				</div>
-			</div>
-			
-		</div>
+    <h2>Charter Details</h2>
+    <div class="container">
+      <p>
+        <label for="charter">Charter Title:</label>
+        <input type="text" id="charter" placeholder="Explore..." />
+      </p>
+      <p>
+        <label for="environment">Environment:</label><br />
+        <textarea id="environment" rows="3">Web, QA, x.x.x</textarea>
+      </p>
+      <p>
+        <label for="estimated-duration">Estimated Duration (minutes):</label>
+        <input type="number" id="estimated-duration" min="0" />
+      </p>
+      <p>
+        <label for="actual-duration">Actual Duration (minutes):</label>
+        <input type="number" id="actual-duration" min="0" />
+      </p>
+      <p>
+        <label for="start-date">Started:</label>
+        <input type="datetime-local" id="start-date" />
+      </p>
+      <p>
+        <label for="end-date">Ended:</label>
+        <input type="datetime-local" id="end-date" />
+      </p>
+    </div>
 
-		<!-- Scripts -->
-		<script src="js/browser-polyfill.js"></script>
-		<script src="js/helpers.js"></script>
-		<script src="js/jszip.js"></script>
-		<script src="js/FileSaver.js"></script>
-		<script src="js/end-session.js"></script>
-	</body>
+    <h2>Actions</h2>
+    <div class="container">
+      <p>
+        The following actions below can be used to export this session's
+        details, and also for ending the active session.
+      </p>
+      <div class="container" role="group" aria-label="Session actions">
+        <button id="button-export">Export Session</button>
+        <button id="button-preview-md">Preview Markdown</button>
+        <button id="button-preview-json">Preview JSON</button>
+        <button id="button-end">End Session</button>
+        <p class="warning" id="warning-end-session">
+          Please make sure you've exported your session if you wish to keep it's
+          details. Ending the session will reset all details logged, and allow
+          for a new session to be started. Confirm ending the session by
+          clicking the button again.
+        </p>
+        <div id="preview">
+          <pre id="preview-content"></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/browser-polyfill.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/jszip.js"></script>
+    <script src="js/FileSaver.js"></script>
+    <script src="js/end-session.js"></script>
+  </body>
 </html>

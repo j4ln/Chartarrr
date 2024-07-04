@@ -1,68 +1,68 @@
 body {
-	margin: 10px;
-	width: 300px;
-	font-size: 16px;
+  margin: 10px;
+  width: 300px;
+  font-size: 16px;
 }
 
 h1 {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 hr {
-	margin: 0;
+  margin: 0;
 }
 
 .container {
-	margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .message {
-	display: none;
-	position: fixed;
-	padding: 6px;
-	top: 45%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: lightseagreen;
-	color: white;
-	width: 65%;
+  display: none;
+  position: fixed;
+  padding: 6px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: lightseagreen;
+  color: white;
+  width: 65%;
 }
 
 .comment-box {
-	position: relative;
+  position: relative;
 }
 
 .comment-box textarea {
-	box-sizing: border-box;
-	overflow-x: hidden;
-	resize: none;
-	width: 260px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  resize: none;
+  width: 260px;
 }
 
 .comment-box #button-screenshot {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
 }
 
 #attachment-preview {
-	cursor: pointer;
-	text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #attachment-delete {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 #button-note {
-	background: lightslategrey;
+  background: lightslategrey;
 }
 
 #button-bug {
-	background: lightcoral;
+  background: lightcoral;
 }
 
 #button-clarification {
-	background: lightsalmon;
+  background: lightsalmon;
 }
