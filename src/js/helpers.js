@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-const action = browser.action || browser.browserAction;
+export const action = browser.action || browser.browserAction;
 
-function getActiveSession() {
+export function getActiveSession() {
   // Return the active session from local storage
   return browser.storage.local.get("active_session").then((results) => {
     return results.active_session;
   });
 }
 
-function getLastScreenshot() {
+export function getLastScreenshot() {
   // Return the last screenshot from local storage
   return browser.storage.local.get("last_screenshot").then((results) => {
     return results.last_screenshot;
   });
 }
 
-function getActiveTab() {
+export function getActiveTab() {
   return browser.tabs
     .query({ currentWindow: true, active: true })
     .then((tabs) => {
@@ -23,7 +23,7 @@ function getActiveTab() {
     });
 }
 
-function updateBadge(session) {
+export function updateBadge(session) {
   // Get remaining time of session
   const remaining = session.estimated_duration - session.duration;
 
@@ -41,13 +41,13 @@ function updateBadge(session) {
   }
 }
 
-function trackSession(session) {
+export function trackSession(session) {
   // Create an alarm which handles tracking our session duration every minute
   browser.alarms.create("session", { periodInMinutes: 1 });
   updateBadge(session);
 }
 
-function createCommentElement(comment, index) {
+export function createCommentElement(comment, index) {
   // Create elements
   let div = document.createElement("div");
   let fieldset = document.createElement("fieldset");

@@ -1,3 +1,5 @@
+import { createCommentElement, getActiveSession } from "./helpers.js";
+
 async function displaySession() {
   const session = await getActiveSession();
 

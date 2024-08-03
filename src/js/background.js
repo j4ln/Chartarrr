@@ -1,3 +1,5 @@
+import { getActiveSession, trackSession, updateBadge } from "./helpers.js";
+
 // If we're on a Chromium browser, import scripts to service worker
 if (typeof browser != "object") {
   importScripts("browser-polyfill.js", "helpers.js");

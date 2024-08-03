@@ -1,3 +1,10 @@
+import {
+  getActiveSession,
+  getActiveTab,
+  getLastScreenshot,
+  trackSession,
+} from "./helpers.js";
+
 function updateAttachmentMessage() {
   getLastScreenshot().then((lastScreenshot) => {
     if (lastScreenshot) {

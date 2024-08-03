@@ -1,3 +1,10 @@
+import {
+  action,
+  createCommentElement,
+  getActiveSession,
+  getActiveTab,
+} from "./helpers.js";
+
 let comment_index = 0; // keep track of current comment index displayed
 
 // Create a comment element for a given comment object, and replace the currently visible one

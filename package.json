@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "lint": "npx prettier --write . && npx eslint . && npx web-ext lint -s ./src",
-    "start": "npx web-ext run -s ./src",
+    "start": "npx web-ext run -s ./src --devtools",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/recommended": "^1.0.7",
     "@types/eslint__js": "^8.42.3",
     "@types/eslint-config-prettier": "^6.11.3",
     "eslint": "^8.57.0",

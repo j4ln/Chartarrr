@@ -7,11 +7,10 @@
     "48": "icons/icon.png",
     "96": "icons/icon@2x.png"
   },
-
   "background": {
-    "scripts": ["js/browser-polyfill.js", "js/helpers.js", "js/background.js"]
+    "scripts": ["js/browser-polyfill.js", "js/background.js"],
+    "type": "module"
   },
-
   "browser_action": {
     "default_icon": {
       "16": "icons/icon-16.png",
@@ -21,12 +20,10 @@
     "default_popup": "popup.html",
     "default_title": "Chartarrr!"
   },
-
   "browser_specific_settings": {
     "gecko": {
       "id": "{b671c134-2bc6-44b9-923a-1a74de71c6c8}"
     }
   },
-
   "permissions": ["<all_urls>", "activeTab", "alarms", "storage"]
 }

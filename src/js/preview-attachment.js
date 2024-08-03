@@ -1,3 +1,9 @@
+import {
+  getActiveSession,
+  getActiveTab,
+  getLastScreenshot,
+} from "./helpers.js";
+
 async function displayPreview() {
   const params = new URLSearchParams(document.location.search);
   const commentIndex = params.get("comment");
